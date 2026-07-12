@@ -1,0 +1,18 @@
+Pearson Correlation & Significance (2020):
+
+H vs Kp:
+  r = 0.0018
+  p = 1.7300 (Not significant ❌)
+
+H vs Dst:
+  r = -0.0155
+  p = 0.8018 (Not significant ❌)
+
+H vs Ap:
+  r = -0.0082
+  p = 0.9337 (Not significant ❌)
+
+H vs F10.7:
+  r = -0.0652
+  p = 0.0000 (Significant ✅)
+

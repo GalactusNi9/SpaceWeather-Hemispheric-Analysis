@@ -1,223 +1,297 @@
 # SpaceWeather-Hemispheric-Analysis
 
-*A Python research toolkit for hemispheric geomagnetic response analysis using INTERMAGNET observatory measurements and space weather indices.*
+> **An Advanced Modular Research Software Package for Hemispheric Geomagnetic Analysis During Solar Cycle 24 (2008–2020)**
 
----
+![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
+![Version](https://img.shields.io/badge/Version-1.0.0-success.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Research](https://img.shields.io/badge/Research-Space%20Weather-orange.svg)
+![Status](https://img.shields.io/badge/Status-Stable-brightgreen.svg)
 
-## Overview
 
-**SpaceWeather-Hemispheric-Analysis** is a Python-based scientific software package developed to investigate hemispheric differences in geomagnetic responses during Solar Cycle 24 (2008–2020). The toolkit provides an end-to-end workflow for preprocessing observatory data, detecting geomagnetic storm events, integrating multiple space weather datasets, performing statistical analyses, and generating scientific visualizations and animations.
+# Overview
 
-The software was developed to support reproducible research by combining ground-based geomagnetic observations with internationally recognized space weather indices. Rather than focusing on a single analysis task, it provides a modular framework that allows researchers to process large observational datasets and evaluate relationships between geomagnetic field variations and solar-terrestrial activity.
+**SpaceWeather-Hemispheric-Analysis** is an advanced modular scientific software package developed for investigating hemispheric geomagnetic responses during **Solar Cycle 24 (2008–2020)**.
 
----
+The software integrates geomagnetic observatory measurements from **INTERMAGNET** with **OMNI Space Weather** datasets to perform data preprocessing, storm detection, event selection, statistical correlation analysis, visualization, and scientific simulation.
 
-## Scientific Objectives
+Originally developed as part of an undergraduate research project, the software has been reorganized into a reproducible and well-documented research package suitable for future scientific development.
 
-The primary objectives of this software are to:
 
-* Process H-component geomagnetic observations from multiple observatories.
-* Standardize and preprocess geomagnetic and solar activity datasets.
-* Detect geomagnetic storm intervals using the Dst index.
-* Select significant events for detailed investigation.
-* Merge datasets originating from different scientific data providers.
-* Compute Pearson correlation statistics between geomagnetic observations and selected space weather indices.
-* Generate publication-quality visualizations and animations.
-* Support reproducible space weather and geomagnetic research.
+# Scientific Background
 
----
+Space weather influences Earth's magnetosphere through interactions between the solar wind and the geomagnetic field. Understanding these interactions is essential for:
 
-## Key Features
+* Space Weather Forecasting
+* Geomagnetism
+* Solar–Terrestrial Physics
+* Magnetospheric Science
+* Ionospheric Research
+* Scientific Data Analysis
 
-* Modular Python architecture
-* Automated preprocessing pipeline
+This software investigates hemispheric responses using geomagnetic H-component observations together with selected space weather indices across different phases of Solar Cycle 24.
+
+
+# Key Features
+
+* Modular scientific workflow
+* Fifteen independent Python modules
+* INTERMAGNET H-component preprocessing
+* OMNI Dst and Kp index processing
 * Geomagnetic storm detection
-* Multi-source data integration
+* Event selection algorithms
+* Multi-source dataset merging
 * Pearson correlation analysis
-* Batch processing capabilities
-* Scientific visualization tools
-* Animation generation
-* Designed for large observational datasets
+* Automated visualization
+* Scientific animations
+* Simulation modules
 * Reproducible scientific workflow
+* Comprehensive technical documentation
 
----
 
-## Software Architecture
+# Scientific Datasets
 
-The analysis pipeline follows a modular workflow:
+The software utilises two primary scientific datasets.
 
-1. Convert raw H-component observatory data.
-2. Convert Kyoto Dst index files.
-3. Detect geomagnetic storm events.
-4. Select events for analysis.
-5. Merge geomagnetic and space weather datasets.
-6. Perform statistical correlation analyses.
-7. Generate plots and animations.
-8. Produce final scientific outputs.
+## INTERMAGNET
 
-Each module performs a dedicated task, allowing individual stages to be executed independently or as part of the complete workflow.
+Ground magnetic observatory measurements from:
 
----
+* SJG Observatory (San Juan)
+* PIL Observatory (Pilar)
 
-## Repository Structure
+
+## OMNI
+
+Space weather parameters including:
+
+* Dst Index
+* Kp Index
+
+The downloaded OMNI files may contain additional parameters, but this software primarily analyses Dst and Kp.
+
+
+# Study Period
+
+The research covers **Solar Cycle 24 (2008–2020)** divided into four scientific phases.
+
+| Solar Phase      | Years     |
+| ---------------- | --------- |
+| Solar Minimum    | 2008–2010 |
+| Ascending Phase  | 2011–2013 |
+| Solar Maximum    | 2014–2015 |
+| Descending Phase | 2016–2020 |
+
+
+# Software Architecture
+
+```text
+                    INTERMAGNET                     OMNI
+                         │                           │
+                         └─────────────┬─────────────┘
+                                       │
+                                       ▼
+                     H-Component & Dst Conversion
+                                       │
+                                       ▼
+                        Geomagnetic Storm Detection
+                                       │
+                                       ▼
+                              Event Selection
+                                       │
+                                       ▼
+                            Multi-source Data Fusion
+                                       │
+                                       ▼
+                        Pearson Correlation Analysis
+                                       │
+                                       ▼
+                          Scientific Visualization
+                                       │
+                                       ▼
+                             Animation Generation
+                                       │
+                                       ▼
+                           Scientific Simulation
+                                       │
+                                       ▼
+                            Research Outputs
+```
+
+
+# Software Modules
+
+| Module                                  | Description                                                                       |
+| --------------------------------------- | --------------------------------------------------------------------------------- |
+| 1HCompConvertor                         | Converts raw INTERMAGNET H-component observations into analysis-ready datasets.   |
+| 2MultiHCompConverter                    | Performs batch conversion of multiple observatory datasets.                       |
+| 3DstConverter                           | Processes OMNI Dst datasets.                                                      |
+| 4DstStormDetector                       | Detects geomagnetic storm events using the Dst index.                             |
+| 5DstApKpF10PearsonCorrelation           | Computes statistical correlations between geomagnetic and solar activity indices. |
+| 6EventSelection                         | Selects significant geomagnetic storm events for analysis.                        |
+| 7MultiHCompMerger                       | Merges processed observatory datasets.                                            |
+| 8HtoDstKpApF10.7PearsonCorrelation      | Performs H-component correlation analyses.                                        |
+| 9BatchHtoDstKpApF10.7PearsonCorrelation | Automates large-scale correlation analyses.                                       |
+| 10PILSJGOMNIALLPHASESMULTIMERGER        | Integrates observatory and OMNI datasets across all solar phases.                 |
+| 11UniversalMergerMotherOfALL            | Produces the final integrated datasets used throughout the workflow.              |
+| 12AnimatorV1                            | Generates scientific animations.                                                  |
+| 13AnimatorV2                            | Produces enhanced animations and visualisations.                                  |
+| 14SimulecrumV1.1                        | Scientific simulation module.                                                     |
+| 15SimulecrumV1.2                        | Extended simulation and visualisation module.                                     |
+
+
+# Repository Structure
 
 ```text
 SpaceWeather-Hemispheric-Analysis/
 
-├── src/
 ├── docs/
+├── src/
 ├── sample_data/
 ├── sample_output/
 ├── images/
 ├── tests/
-
-README.md
-requirements.txt
-LICENSE
-CHANGELOG.md
-CONTRIBUTING.md
-CITATION.cff
+│
+├── README.md
+├── LICENSE
+├── requirements.txt
+├── .gitignore
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+└── CITATION.cff
 ```
 
----
 
-## Software Modules
-
-| Module                                     | Description                                                                   |
-| ------------------------------------------ | ----------------------------------------------------------------------------- |
-| 1HCompConvertor.py                         | Converts raw H-component observatory data into a standardized format.         |
-| 2MultiHCompConverter.py                    | Batch conversion of multiple H-component datasets.                            |
-| 3DstConverter.py                           | Converts Kyoto Dst data into analysis-ready format.                           |
-| 4DstStormDetector.py                       | Detects geomagnetic storm intervals.                                          |
-| 5DstApKpF10PearsonCorrelation.py           | Computes Pearson correlations between geomagnetic indices.                    |
-| 6EventSelection.py                         | Selects events for detailed investigation.                                    |
-| 7MultiHCompMerger.py                       | Merges processed H-component datasets.                                        |
-| 10PILSJGOMNIALLPHASESMULTIMERGER.py        | Integrates observatory and space weather datasets across all analysis phases. |
-| 11UniversalMergerMotherOfALL.py            | Produces the final integrated analysis dataset.                               |
-| 8HtoDstKpApF10.7PearsonCorrelation.py      | Computes H-component correlations with Dst, Kp, Ap and F10.7 indices.         |
-| 9BatchHtoDstKpApF10.7PearsonCorrelation.py | Performs automated batch correlation analyses.                                |
-| 12AnimatorV1.py                            | Scientific animation generation (Version 1).                                  |
-| 13AnimatorV2.py                            | Enhanced scientific animation generation (Version 2).                         |
-| 14SimulecrumV1.1.py                        | Scientific simulation module.                                                 |
-| 15SimulecrumV1.2.py                        | Updated scientific simulation module.                                         |
-
----
-
-## Required Data
-
-This software does **not** automatically download scientific datasets.
-
-Users are responsible for obtaining the required data from the official providers before executing the analysis.
-
-Required datasets include:
-
-* INTERMAGNET observatory H-component measurements
-* Kyoto Dst Index
-* OMNI Solar Wind Data
-* Kp Index
-* Ap Index
-* F10.7 Solar Radio Flux
-
-Detailed acquisition instructions are provided in the User Manual.
-
----
-
-## Installation
+# Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/<username>/SpaceWeather-Hemispheric-Analysis.git
+git clone https://github.com/GalactusNi9/SpaceWeather-Hemispheric-Analysis.git
 ```
 
-Navigate into the project directory:
+Enter the project directory:
 
 ```bash
 cd SpaceWeather-Hemispheric-Analysis
 ```
 
-Install the required Python packages:
+Install required Python packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
 
-## Typical Workflow
+# Documentation
 
-1. Download the required datasets.
-2. Convert raw H-component observations.
-3. Convert Dst files.
-4. Detect geomagnetic storms.
-5. Select analysis events.
-6. Merge datasets.
-7. Execute correlation modules.
-8. Generate figures and animations.
-9. Review statistical outputs.
+Comprehensive documentation is available in the `docs/` directory.
 
----
+| Guide                   | Description                        |
+| ----------------------- | ---------------------------------- |
+| User Manual             | Complete software usage guide      |
+| Installation Guide      | Installation and configuration     |
+| Data Preparation Guide  | Scientific dataset preparation     |
+| Technical Guide         | Internal software architecture     |
+| Developer Guide         | Software maintenance and extension |
+| GitHub Publishing Guide | Repository management              |
 
-## Outputs
 
-Depending on the executed modules, the software produces:
+# Sample Outputs
 
-* CSV datasets
-* Correlation matrices
-* Statistical summaries
-* Publication-quality figures
-* Time-series plots
+The repository contains representative examples including:
+
+* Processed datasets
+* CSV files
+* Time-series figures
+* Correlation results
 * Scientific animations
-* Intermediate merged datasets
+* Merged datasets
 
----
 
-## Intended Users
+# Requirements
 
-This software is intended for:
+Python packages:
 
-* Space weather researchers
-* Geophysicists
-* Heliophysics researchers
-* Graduate students
-* Data scientists working with geomagnetic observations
-* Researchers studying solar-terrestrial interactions
+* numpy
+* matplotlib
 
----
+System requirements:
 
-## Citation
+* Python 3.x
+* Git
+* Tkinter support (TkAgg backend)
+* FFmpeg (for animation export)
 
-If this software contributes to your research, please cite this repository using the citation information provided in `CITATION.cff`.
 
----
+# Citation
 
-## License
+If you use this software in research, please cite the repository using the metadata provided in `CITATION.cff`.
 
-This project is distributed under the terms of the selected open-source license.
+Author:
 
----
+**Phobian Maisha**
 
-## Acknowledgements
+ORCID:
 
-The development of this software was made possible through the availability of publicly accessible geomagnetic and space weather datasets provided by the international scientific community. The project acknowledges the organizations responsible for maintaining and distributing these data resources.
+https://orcid.org/0000-0003-2657-7206
 
----
+Repository:
 
-## Future Development
+https://github.com/GalactusNi9/SpaceWeather-Hemispheric-Analysis
 
-Planned improvements include:
 
-* Additional geomagnetic indices
-* Extended Solar Cycle analyses
-* Enhanced visualization capabilities
-* Performance optimization
-* Improved documentation
-* Expanded statistical analysis modules
+# License
 
----
+This project is released under the **MIT License**.
 
-**Version:** 1.0.0
+See the `LICENSE` file for details.
 
-**Programming Language:** Python
 
-**Research Domain:** Space Weather • Geomagnetism • Solar-Terrestrial Physics
+# Author
+
+**Phobian Maisha**
+
+GitHub: https://github.com/GalactusNi9
+
+ORCID: https://orcid.org/0000-0003-2657-7206
+
+Research Area:
+
+* Space Weather
+* Geomagnetism
+* Solar–Terrestrial Physics
+* Scientific Computing
+
+
+# Acknowledgements
+
+The author gratefully acknowledges the providers of the scientific datasets used throughout this project.
+
+* INTERMAGNET
+* Kyoto World Data Center for Geomagnetism
+* NASA OMNIWeb
+
+Their continued efforts in maintaining high-quality space weather datasets make reproducible scientific research possible.
+
+
+# Future Development
+
+Planned enhancements include:
+
+* Graphical User Interface (GUI)
+* Command-Line Interface (CLI)
+* Automated workflow execution
+* Additional observatories
+* Machine learning integration
+* Expanded statistical analysis
+* Interactive visualisations
+* Performance optimisation
+
+
+# Final Remarks
+
+**SpaceWeather-Hemispheric-Analysis** is a comprehensive scientific software package that demonstrates a complete research workflow for analysing hemispheric geomagnetic responses during Solar Cycle 24.
+
+The project combines modular software engineering with reproducible scientific methodology, providing researchers and students with a structured platform for space weather data analysis, statistical investigation, visualisation, and future software development.

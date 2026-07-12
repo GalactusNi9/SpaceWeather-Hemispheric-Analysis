@@ -1,0 +1,18 @@
+SJG Pearson Correlation Coefficients and Significance (2014-2015):
+
+H vs Kp:
+  r = -0.0226
+  p = 1.96399 (Not significant ❌)
+
+H vs Dst:
+  r = 0.0240
+  p = 1.96162 (Not significant ❌)
+
+H vs Ap:
+  r = -0.0134
+  p = 1.97869 (Not significant ❌)
+
+H vs F10.7:
+  r = 0.0076
+  p = 1.98785 (Not significant ❌)
+

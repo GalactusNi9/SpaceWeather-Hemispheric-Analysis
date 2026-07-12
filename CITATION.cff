@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+title: "SpaceWeather-Hemispheric-Analysis"
+message: "If you use this software in your research, please cite it using the metadata below."
+type: software
+
+authors:
+
+* family-names: "Maisha"
+  given-names: "Phobian"
+  orcid: "https://orcid.org/0000-0003-2657-7206"
+
+abstract: >
+SpaceWeather-Hemispheric-Analysis is a modular Python research software
+package developed for preprocessing, integrating, analysing and
+visualising hemispheric geomagnetic responses during Solar Cycle 24
+using INTERMAGNET observatory measurements and OMNI space weather datasets.
+
+repository-code: "https://github.com/GalactusNi9/SpaceWeather-Hemispheric-Analysis"
+url: "https://github.com/GalactusNi9/SpaceWeather-Hemispheric-Analysis"
+
+keywords:
+
+* Space Weather
+* Geomagnetism
+* Solar Cycle 24
+* INTERMAGNET
+* OMNI
+* Dst
+* Kp
+* H-component
+* Geomagnetic Storms
+* Pearson Correlation
+* Scientific Computing
+* Python
+
+license: "MIT"
+
+version: "1.0.0"
+
+date-released: "2026-07-11"
+
+language: "en"
+
+preferred-citation:
+type: software
+authors:
+- family-names: "Maisha"
+given-names: "Phobian"
+orcid: "https://orcid.org/0000-0003-2657-7206"
+title: "SpaceWeather-Hemispheric-Analysis"
+version: "1.0.0"
+year: 2026
+url: "https://github.com/GalactusNi9/SpaceWeather-Hemispheric-Analysis"

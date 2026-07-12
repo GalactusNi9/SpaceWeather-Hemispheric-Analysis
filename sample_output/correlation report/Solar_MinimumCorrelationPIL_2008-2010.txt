@@ -1,0 +1,18 @@
+PIL Pearson Correlation Coefficients and Significance (2008-2010):
+
+H vs Kp:
+  r = 0.0000
+  p = 2.00000 (Not significant ❌)
+
+H vs Dst:
+  r = 0.0000
+  p = 2.00000 (Not significant ❌)
+
+H vs Ap:
+  r = 0.0000
+  p = 2.00000 (Not significant ❌)
+
+H vs F10.7:
+  r = 0.0000
+  p = 2.00000 (Not significant ❌)
+

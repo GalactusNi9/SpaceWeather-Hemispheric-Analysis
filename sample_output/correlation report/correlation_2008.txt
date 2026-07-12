@@ -1,0 +1,18 @@
+Pearson Correlation & Significance (2008):
+
+H vs Kp:
+  r = 0.0000
+  p = 2.0000 (Not significant ❌)
+
+H vs Dst:
+  r = 0.0000
+  p = 2.0000 (Not significant ❌)
+
+H vs Ap:
+  r = 0.0000
+  p = 2.0000 (Not significant ❌)
+
+H vs F10.7:
+  r = 0.0000
+  p = 2.0000 (Not significant ❌)
+

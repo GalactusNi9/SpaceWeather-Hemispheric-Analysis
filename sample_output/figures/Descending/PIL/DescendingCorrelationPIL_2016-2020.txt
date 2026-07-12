@@ -1,0 +1,18 @@
+PIL Pearson Correlation Coefficients and Significance (2016-2020):
+
+H vs Kp:
+  r = 0.0192
+  p = 1.96929 (Not significant ❌)
+
+H vs Dst:
+  r = -0.0663
+  p = 1.89400 (Not significant ❌)
+
+H vs Ap:
+  r = 0.0152
+  p = 1.97567 (Not significant ❌)
+
+H vs F10.7:
+  r = -0.0593
+  p = 1.90529 (Not significant ❌)
+

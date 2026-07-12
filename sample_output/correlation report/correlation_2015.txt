@@ -1,0 +1,18 @@
+Pearson Correlation & Significance (2015):
+
+H vs Kp:
+  r = -0.0705
+  p = 0.0000 (Significant ✅)
+
+H vs Dst:
+  r = 0.0605
+  p = 0.0000 (Significant ✅)
+
+H vs Ap:
+  r = -0.0777
+  p = 0.0000 (Significant ✅)
+
+H vs F10.7:
+  r = 0.2486
+  p = 0.0000 (Significant ✅)
+
